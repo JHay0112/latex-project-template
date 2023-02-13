@@ -1,0 +1,28 @@
+name: Publish
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  build:
+    name: Publish Report
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Compile Report
+    - uses: xu-cheng/latex-action@v2
+      with:
+        root_file: report.tex
+
+    - name: Upload Report
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{secrets.GITHUB_TOKEN}}
+        file: report.pdf
+        asset_name: Report.pdf
+        tag: ${{github.ref}}
+        overwrite: true

@@ -1,34 +1,37 @@
 \documentclass{article}
+
 \usepackage[utf8]{inputenc}
-\usepackage{float}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{appendix}
-\usepackage{hyperref}
-\usepackage{parskip}
-\usepackage[style=ieee]{biblatex}
 \usepackage[a4paper, margin=1in]{geometry}
+\usepackage{float}
+\usepackage{parskip}
 \usepackage{fancyhdr}
 \usepackage{titling}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage[style=ieee]{biblatex}
+\usepackage[hidelinks]{hyperref}
+\usepackage{appendix}
+
 
 \title{Project Report Template}
 \author{J. L. Hay \cite{hay22}}
 \date{November 2022}
 
-% EMTH211 vector and matrix notation
+
 \renewcommand{\vec}[1]{\underline{#1}}
 \newcommand{\mat}[1]{\boldsymbol{#1}}
 \newcommand{\innerprod}[2]{\left\langle #1, #2 \right\rangle}
 \newcommand{\norm}[1]{\left\|#1\right\|}
 \newcommand{\abs}[1]{\left|#1\right|}
 
-% ENCE260 logical notation
 \renewcommand{\lnot}[1]{\overline{#1}}
 \renewcommand{\land}{\cdot}
 \renewcommand{\lor}{+}
 \newcommand{\lxor}{\oplus}
 
-% Page headers and footers
+
 \renewcommand{\headrule}{}
 \fancyhead{}
 \fancyfoot{}
@@ -36,57 +39,84 @@
 \fancyfoot[R]{\thepage}
 \pagestyle{fancy}
 
-% References
+
 \addbibresource{report.bib}
+
 
 \begin{document}
 
-\maketitle
 \thispagestyle{empty}
 
+\maketitle
+
 \pagebreak
+
+
 \pagenumbering{roman}
+
+\section*{Executive Summary}
+\addcontentsline{toc}{section}{Executive Summary}
+...
+
+\pagebreak
+
 
 \tableofcontents
 
 \pagebreak
+
+
 \pagenumbering{arabic}
 \fancyfoot[R]{\thepage/\pageref*{page:final}}
-\section*{Introduction}
-\addcontentsline{toc}{section}{Introduction}
 
+\section{Introduction}
+...
 
 \pagebreak
+
+
 \section{Context}
-
+...
 
 \pagebreak
-\section{Design}
 
+
+\section{Design}
+...
 
 \subsection{Overview}
-
+...
 
 \subsection{Rationale}
-
+... 
 
 \pagebreak
+
+
 \section{Evaluation}
-
+...
 
 \pagebreak
+
+
 \section*{Conclusion}
-\label{page:final}
 \addcontentsline{toc}{section}{Conclusion}
-
+\label{page:final}
+...
 
 \pagebreak
+
+
 \pagenumbering{Roman}
 \fancyfoot[R]{\thepage}
+
 \printbibliography
 \addcontentsline{toc}{section}{References}
 
 \pagebreak
 \appendix
+
+\section*{First Appendix}
+...
 
 \end{document}

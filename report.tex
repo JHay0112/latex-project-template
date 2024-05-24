@@ -1,37 +1,52 @@
 \documentclass{article}
 
-\usepackage[utf8]{inputenc}
-\usepackage[a4paper, margin=1in]{geometry}
-\usepackage{float}
-\usepackage{parskip}
-\usepackage{fancyhdr}
-\usepackage{titling}
+% This document is a report template intended for use in engineering design reports. Please replace
+% this comment with your own.
+%
+% Template Author: J. L. Hay
 
-\usepackage{amsmath}
-\usepackage{amssymb}
 
-\usepackage[style=ieee]{biblatex}
-\usepackage[hidelinks]{hyperref}
+% High level formatting 
+\usepackage[utf8]{inputenc} % Use the UTF-8 character encoding
+\usepackage[a4paper, margin=1in]{geometry} % Use A4 paper with a 1 inch margin
+
+% Look and feel
+\usepackage[hidelinks]{hyperref} % Automatically format links, do not show boxes around them
+\usepackage{float} % Control floating elements
+\usepackage{parskip} % Avoid indenting paragraphs
+\usepackage{fancyhdr} % Header and footer control
+\usepackage{titling} % Title page
+
+% Maths
+\usepackage{amsmath} % Mathematical environments
+\usepackage{amssymb} % Mathematical symbols
+
+% References and appendices
+\usepackage[style=ieee]{biblatex} % IEEE referencing
 \usepackage{appendix}
 
 
+% Document details
 \title{Project Report Template}
 \author{J. L. Hay \cite{hay22}}
 \date{May 2024}
 
 
+% Math short hands
 \renewcommand{\vec}[1]{\underline{#1}}
 \newcommand{\mat}[1]{\boldsymbol{#1}}
 \newcommand{\innerprod}[2]{\left\langle #1, #2 \right\rangle}
 \newcommand{\norm}[1]{\left\|#1\right\|}
 \newcommand{\abs}[1]{\left|#1\right|}
 
+% Logic short hands
 \renewcommand{\lnot}[1]{\overline{#1}}
 \renewcommand{\land}{\cdot}
 \renewcommand{\lor}{+}
 \newcommand{\lxor}{\oplus}
 
 
+% Header styles
 \renewcommand{\headrule}{}
 \fancyhead{}
 \fancyfoot{}
@@ -40,63 +55,72 @@
 \pagestyle{fancy}
 
 
+% Bibliography
 \addbibresource{report.bib}
+
 
 
 \begin{document}
 
 
+% Title page
 \maketitle
-
 \thispagestyle{empty}
 
 \pagebreak
 
 
+% Executive Summary
 \pagenumbering{roman}
 
 \section*{Executive Summary}
-\input{sections/executive_summary.tex}
+\include{sections/executive_summary.tex}
 
 \pagebreak
 
 
+% Table of Contents
 \tableofcontents
 
 \pagebreak
 
 
+% Introduction
 \pagenumbering{arabic}
-\fancyfoot[R]{\thepage/\pageref*{page:final}}
+\fancyfoot[R]{\thepage/\pageref*{page:final}} % Arabic page numbering in footer
 
 \section{Introduction}
-\input{sections/introduction.tex}
+\include{sections/introduction.tex}
 
 \pagebreak
 
 
+% Design context
 \section{Context}
-\input{sections/context.tex}
+\include{sections/context.tex}
 
 \pagebreak
 
 
+% Design details
 \section{Design}
-\input{sections/design.tex}
+\include{sections/design.tex}
 
 \pagebreak
 
 
+% Design evaluation
 \section{Evaluation}
-\input{sections/evaluation.tex}
+\include{sections/evaluation.tex}
 
 \pagebreak
 
 
+% Conclusion
 \section*{Conclusion}
 \addcontentsline{toc}{section}{Conclusion}
 \label{page:final}
-\input{sections/conclusion.tex}
+\include{sections/conclusion.tex}
 
 \pagebreak
 
@@ -104,12 +128,14 @@
 \pagenumbering{Roman}
 \fancyfoot[R]{\thepage}
 
+% Bibliography
 \printbibliography
 \addcontentsline{toc}{section}{References}
 
 \pagebreak
-\appendix
 
-\input{sections/appendices.tex}
+% Apendix
+\appendix
+\include{sections/appendices.tex}
 
 \end{document}

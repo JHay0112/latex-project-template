@@ -1,11 +1,11 @@
 # Project Report Template
 
-This is a LaTeX template based upon the requirements laid out for engineering design reports in 
-ENEL200 and ENEL300 (a University of Canterbury design course). This repository also contains a
-Makefile for automating the compilation of the report. Due to my own use-case this includes recipes
-for the inclusion of schematics from KiCad.
+This is a LaTeX template aimed at providing a consistent and pleasant report style suitable for 
+engineering documents. The original inspiration for the layout of these reports comes from my 
+education at the University of Cantebury. 
 
-## GitHub work flow
+This repository contains Makefiles based around latexmk for performing the compilation of the LaTeX
+document. The Makefiles include functionality for including standalone tikz diagrams, and including
+schematics from KiCAD (a rather niche use-case close to my heart).
 
-This template comes with a GitHub work flow for automatically compiling the document on GitHub. Once
-the compilation is complete the final report can be found attached to the release on GitHub.
+Feel free to use this template as you wish.

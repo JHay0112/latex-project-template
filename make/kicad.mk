@@ -1,5 +1,7 @@
-# Builds KiCAD BOM and schematic
-
+# Builds KiCAD BOM and schematic for report.
+# I wrote this a year or so ago so this may need some tweaks.
+#
+# Author: J. L. Hay
 
 ifndef KICAD_MK
 KICAD_MK = 1

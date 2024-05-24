@@ -5,7 +5,7 @@ ifndef KICAD_MK
 KICAD_MK = 1
 
 
-include make/globals.mk
+include make/common.mk
 
 
 KICAD_DIR = ./hardware
